@@ -1,0 +1,22 @@
+R 1820 1580
+NO ./textures/colorstone.xpm
+EA ./textures/bluestone.xpm
+SO ./textures/wood.xpm
+WE ./textures/redbrick.xpm
+
+S1 ./textures/barrel.xpm
+S2 ./textures/table.xpm
+S3 ./textures/pillar.xpm
+
+C 27,100,100
+F 125,30,50
+
+111111111111111
+100000000000001
+100000000000001
+100000000000001
+100002030400001
+100000000000001
+1000000S0000001
+100000000000001
+111111111111111
