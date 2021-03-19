@@ -14,6 +14,8 @@ SANITIZE = -O1 -g -fsanitize=address -fno-omit-frame-pointer
 
 NAME = cub3D
 
+BONUS = cub3D_bonus
+
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
@@ -87,21 +89,23 @@ BONUS_OBJS = $(BONUS_SRCS: %.c=%.o)
 
 all: $(NAME)
 
-bonus: $(COMMON_OBJS) $(BONUS_OBJS)
-	@$(MAKE) -C mlx
-	@$(MAKE) -C libft
-	@$(CC) $(SANITIZE) -o $(NAME) $^ $(COMMON_INC) $(BONUS_INC) $(LIBS) $(LIBS_DIR)
-
 $(NAME): $(COMMON_OBJS) $(MANDATORY_OBJS)
 	@$(MAKE) -C mlx
 	@$(MAKE) -C libft
 	@$(CC) $(SANITIZE) -o $(NAME) $(COMMON_OBJS) $(MANDATORY_OBJS) $(COMMON_INC) $(MANDATORY_INC) $(LIBS) $(LIBS_DIR)
 
+bonus: $(BONUS)
+
+$(BONUS): $(COMMON_OBJS) $(BONUS_OBJS)
+	@$(MAKE) -C mlx
+	@$(MAKE) -C libft
+	@$(CC) $(SANITIZE) -o $(BONUS) $^ $(COMMON_INC) $(BONUS_INC) $(LIBS) $(LIBS_DIR)
+
 clean:
 	@cd libft && $(MAKE) clean
 	@echo libft objects files cleaned!
 	@rm -fr *.o screenshot.bmp
-	@echo cub3d ojects files and screenshot remove!
+	@echo cub3d ojects files and screenshot removed!
 
 fclean: clean
 	@cd libft && $(MAKE) fclean
