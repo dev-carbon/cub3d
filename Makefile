@@ -109,7 +109,7 @@ clean:
 
 fclean: clean
 	@cd libft && $(MAKE) fclean
-	@rm -fr $(NAME)
+	@rm -fr $(NAME) $(BONUS)
 
 re: fclean bonus
 
