@@ -40,7 +40,6 @@ int	cub3d_render(t_game *game)
 {
 	create_window(game);
 	render_world3d(game);
-	render_mini_map(game);
 	return (0);
 }
 

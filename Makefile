@@ -45,7 +45,6 @@ MANDATORY_INC = -Isrcs/mandatory/includes
 BONUS_INC = -Isrcs/bonus/includes
 
 COMMON_SRCS = srcs/main.c \
-		srcs/cub3d.c \
 		$(wildcard srcs/common/bmp/*.c) \
 		$(wildcard srcs/common/engine/*.c) \
 		$(wildcard srcs/common/event/*.c) \
@@ -59,7 +58,8 @@ COMMON_SRCS = srcs/main.c \
 		$(wildcard srcs/common/wall/*.c) \
 		$(wildcard srcs/common/window/*.c) \
 
-MANDATORY_SRCS = srcs/mandatory/isset/is_set_config.c \
+MANDATORY_SRCS = srcs/mandatory/cub3d.c \
+		srcs/mandatory/isset/is_set_config.c \
 		srcs/mandatory/setup/set_config.c \
 		srcs/mandatory/setup/set_map.c \
 		srcs/mandatory/setup/set_sprites.c \
@@ -70,7 +70,8 @@ MANDATORY_SRCS = srcs/mandatory/isset/is_set_config.c \
 		srcs/mandatory/validate/is_valid_char.c \
 		srcs/mandatory/validate/is_valid_texture.c \
 
-BONUS_SRCS = srcs/bonus/isset/is_set_config_bonus.c \
+BONUS_SRCS = srcs/bonus/cub3d_bonus.c \
+		srcs/bonus/isset/is_set_config_bonus.c \
 		srcs/bonus/setup/set_config_bonus.c \
 		srcs/bonus/setup/set_map_bonus.c \
 		srcs/bonus/setup/set_sprites_bonus.c \
